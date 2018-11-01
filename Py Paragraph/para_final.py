@@ -17,7 +17,7 @@ avg_sent_count = d/sentence
 
 for words in content:
         if words not in [" ",",",";","."]:
-                characters += sum(len(word) for word in words)
+                characters += sum(len(letter) for letter in words)
                 average_char = characters/d
      
 print ("Paragraph Analysis")
