@@ -8,6 +8,7 @@ words = re.split(r"[\s\.,\?]+",content)
 characters = 0
 
 
+
 d = len(words)
 
 sentence = content.count('.')
@@ -15,8 +16,9 @@ sentence = content.count('.')
 avg_sent_count = d/sentence
 
 for words in content:
-    characters += sum(len(word) for word in words)
-    average_char = characters/d
+        if words not in [" ",",",";","."]:
+                characters += sum(len(word) for word in words)
+                average_char = characters/d
      
 print ("Paragraph Analysis")
 print ("-----------------")
@@ -24,4 +26,6 @@ print ("Approximate Word Count: " + str(d))
 print ("Approximate Sentence Count: " + str(sentence))
 print ("Average Sentence Length: " + str(avg_sent_count))
 print ("Average Letter Count: " + str(average_char))
+
+
 
