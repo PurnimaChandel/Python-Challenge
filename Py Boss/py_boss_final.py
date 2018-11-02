@@ -65,7 +65,7 @@ with open(csvpath, 'r') as csvfile:
     dobs =[]
     SSNs =[]
     states= []
-    
+#Deriving Required Values from the csv    
     for row in csvreader:
         emp_id = row[0]
         new_empid.append(emp_id)
@@ -84,8 +84,11 @@ with open(csvpath, 'r') as csvfile:
         abr_state = us_state_abbrev[row[4]]
         states.append(abr_state)
         
+#Zipping all the values in required format in a new file        
 new_csv = zip(new_empid, first_names,last_names,dobs,SSNs,states)
 output_file = os.path.join("new_"+ "employee_data.csv")
+
+#Creating new csv file
 with open(output_file, 'w') as datafile:
     csvwriter = csv.writer(datafile, delimiter= ",")
     csvwriter.writerow(["Emp Id", "First Name", "Last Name", "DOB", "SSN","States"])
