@@ -6,14 +6,12 @@ with open(csvpath, 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter= ",")
     header = next(csvreader)
     csvlist = list(csvreader)
-    #dates= []
     revenues =[]
     rev_change =[]
     total_rev = 0
     
     
     for row in  csvlist:
-        #dates.append(row[0])
         revenues.append(int(row[1]))
         
     #Calculate Total Months and Total net amount of "Profit/Losses" 
