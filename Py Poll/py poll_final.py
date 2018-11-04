@@ -19,9 +19,10 @@ per_votes = (count)/(total_votes)*100
 per_votes = per_votes.astype(float).map("{:,.2f}%".format)
 
 
-new_data = list(zip(Candidates, per_votes, count))
-
+#Creating Results Dataframe
+new_data = pd.DataFrame({"Total Votes" : count, "Percentage Votes" : per_votes})
 #Find Winner
+
 winner = data['Candidate'].mode()
 
 
@@ -32,4 +33,4 @@ print("Total Votes: " + str(total_votes))
 print("-------------------------")
 print(new_data)
 print("-------------------------")
-print(str(winner))
+print("Winner: " +str(winner))
