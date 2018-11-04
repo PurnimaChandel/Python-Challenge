@@ -5,7 +5,11 @@ Election Results
 -------------------------
 Total Votes: 3521001
 -------------------------
-[('Khan', '63.00%', 2218231), ('Correy', '20.00%', 704200), ('Li', '14.00%', 492940), ("O'Tooley", '3.00%', 105630)]
+          Total Votes Percentage Votes
+Khan          2218231           63.00%
+Correy         704200           20.00%
+Li             492940           14.00%
+O'Tooley       105630            3.00%
 -------------------------
 Winner: 0    Khan
 dtype: object
